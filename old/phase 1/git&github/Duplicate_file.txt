@@ -1,0 +1,14 @@
+Removing_ONLY_from_remote repo not from local repo after adding and commiting
+
+git rm -r --cached sample2.txt
+git commit -sm "removing from remote"
+git push
+
+
+How to add all files except one ?
+
+git branch my-temporary-work
+git checkout master
+git merge my-temporary-work
+
+https://stackoverflow.com/questions/26647359/how-to-commit-all-file-except-one-in-github-for-windows/46520840

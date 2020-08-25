@@ -1,0 +1,12 @@
+How to make a PR
+
+FOrk
+Clone git clone <repo url>
+git remote add origin <repo url of forked repo from your account>
+git branch 
+git checkout -b <branch name>
+<MAKE CHANGES IN THE CODE>
+git add -A
+git commit -sm <commit-msg>
+git push origin my-branch----> This pushes to the forked repo on my account
+Instantly,in terminal itself you get the place to go for pull request.

@@ -1,0 +1,10 @@
+To sync your fork with this original one, you'll have to add the upstream url. You only have to do this once:
+
+	git remote add upstream <url of repo master>
+
+Then when you want to get the changes from the main repository:
+
+	git fetch upstream
+	git checkout master
+	git merge upstream/master
+	
