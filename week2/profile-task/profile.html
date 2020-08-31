@@ -162,22 +162,28 @@ tr:nth-child(even) {background-color: #f2f2f2; }
         </tbody>
         <tfoot>
             <tr class="table-subjects">
-                <td>Total</td>
-                <td>400</td>
+                <td class="left">Total</td>
+                <td class="right" id="tot">400</td>
             </tr>
             
             <tr class="table-subjects">
-                <td>Average</td>
-                <td>66</td>
+                <td class="left">Average</td>
+                <td class="right" id="avg"></td>
             </tr>
             <tr class="table-subjects">
-                <td>CGPA</td>
-                <td>7.3</td>
+                <td class="left">CGPA</td>
+                <td class="right">7.3</td>
             </tr>
         </tfoot>    
     </table>
 </div>
 
+<script>
+    let avgcell = document.getElementById('avg');
+    avgcell.innerText = 66;
+    let totcell = document.getElementById('tot');
+    totcell.innerText = 400;
+</script>
 
 
 </body>
