@@ -1,0 +1,12 @@
+BSA9
+CDS_5
+EERC9
+PS_2
+PS_1
+
+links:
+http://ps-iiith.vlabs.ac.in/List%20of%20experiments.html?domain=Computer%20Science    
+http://ps-iiith.vlabs.ac.in/Target%20Audience.html?domain=Computer%20Science
+http://eerc01-iiith.vlabs.ac.in/exp9/Introduction.html?domain=Civil%20Engineering&lab=Welcome%20to%20Basic%20Engineering%20Mechanics%20and%20Strength%20of%20Materials%20lab!
+http://cds-iiith.vlabs.ac.in/BackgroundPrinciple.html?domain=%20Chemical%20Sciences
+http://bsa-iiith.vlabs.ac.in/exp9/Experiment.html?domain=Civil%20Engineering&lab=Structural%20Analysis%20Lab
