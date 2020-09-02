@@ -102,6 +102,10 @@ li a{
 
 tr:nth-child(even) {background-color: #f2f2f2; }
 
+button{
+    padding:10px;
+}
+
 </style>
 </head>
 <body>
@@ -176,13 +180,26 @@ tr:nth-child(even) {background-color: #f2f2f2; }
             </tr>
         </tfoot>    
     </table>
+    <br><br>
+    <h1 id="demo"></h1>
+    <button onclick="myFunction()">Match REGX Pattern</button>
+
+    
 </div>
+
 
 <script>
     let avgcell = document.getElementById('avg');
     avgcell.innerText = 66;
     let totcell = document.getElementById('tot');
     totcell.innerText = 400;
+
+    function myFunction() {
+      var str = document.getElementById("title").innerHTML;
+      var patt = /Aadhar/i;
+      var result = str.match(patt);
+      document.getElementById("demo").innerHTML = result;
+    }
 </script>
 
 
