@@ -18,36 +18,65 @@
     }
     } 
   </style>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 <body>
-<form id="form1" action="submit.html">
+<form id="form1" action="submit.html" method="GET">
   <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name"><br><br>
+  <input type="text" id="name" onchange="myFunction()" name="name"><br><br>
   
   <label for="phone">Phone Number</label><br>
-  <input type="number" id="phone" name="phone"><br><br>
+  <input type="number" id="phone" onchange="myFunction()" name="phone"><br><br>
  
   <label for="course">Course Of Choice:</label><br>
 
-  <input type="radio" id="bach" name="bach" value="Bachelors">
+  <input type="radio" id="bach" name="course" value="Bachelors">
   <label for="bach">Bachelors</label><br>
-  <input type="radio" id="mast" name="mast" value="Masters">
+  <input type="radio" id="mast" name="course" value="Masters">
   <label for="mast">Masters</label><br><br>
 
   <label for="desc">Description</label><br>
-  <input type="text" id="desc" name="desc"><br><br>
-
-   <label for="sub">Subject of Interest</label><br>
-   <input type="checkbox" id="sub1" name="sub1" value="CPP">
-    <label for="sub1">CPP</label><br>
-    <input type="checkbox" id="sub2" name="sub2" value="NodeJS">
-    <label for="sub2">NodeJS</label><br>
-    <input type="checkbox" id="sub3" name="sub3" value="Java">
-    <label for="sub3">Java</label><br><br>
-  <input type="submit" value="Submit">
+  <input type="text" id="desc" name="desc" onchange="myFunction()"><br><br>
+     <label for="sub">Subject of Interest</label><br>
+     <input type="checkbox" onclick="myFunction()" id="sub1" name="sub1" class="checkbox" value="CPP">
+      <label for="sub1">CPP</label><br>
+      <input type="checkbox" onclick="myFunction()" id="sub2" name="sub2" class="checkbox" value="NodeJS">
+      <label for="sub2">NodeJS</label><br>
+      <input type="checkbox" onclick="myFunction()" id="sub3" name="sub3" class="checkbox" value="Java">
+      <label for="sub3">Java</label><br><br>
+    <input type="submit" id="button1" value="Submit">
 <br><br>
   <label for="country">Country</label>
-<input type="text" required id="country" name="country" form="form1">
+<input type="text" required id="country" onchange="myFunction()" name="country" form="form1">
 </form>
+<script>
+
+function myFunction(){
+   var x ,text;
+   var flag = 0;
+   var isChecked = false;
+   const button = document.getElementById('button1')
+   button.disabled = true;
+  // Get the value of the input field with id="numb"
+   console.log("Enters");
+   x = document.getElementById("phone").value;
+   const cb = document.getElementsByClassName('checkbox'); //object
+  
+      let i;
+      for(i=0;i<cb.length;i++){
+        if(cb[i].checked){
+          isChecked = true;
+        }
+      }
+    if (isChecked && !(isNaN(x))){
+      flag=1;
+    }
+    if(flag==1){
+      button.disabled = false;
+    }
+}
+
+
+</script>
 </body>
 </html>

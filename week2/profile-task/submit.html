@@ -1,1 +1,43 @@
-Form is submitted .Excellent .
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SUCCESS</title>
+</head>
+<body>
+	Form is submitted .Excellent .
+	<p id="p1"></p>
+	<p id="p2"></p>
+	<p id="p3"></p>
+	<p id="p4"></p>
+	<p id="p5"></p>
+	<p id="p6"></p>
+	<script>
+		function getQueryVariable(variable) {
+		    var query = window.location.search.substring(1);
+		    var vars = query.split('&');
+		    for (var i = 0; i < vars.length; i++) {
+		        var pair = vars[i].split('=');
+		        if (decodeURIComponent(pair[0]) == variable) {
+		            return decodeURIComponent(pair[1]);
+		        }
+		    }
+		}
+		document.getElementById("p1").innerHTML =getQueryVariable('name').replace('+',' ') ; // you will have to parse
+	document.getElementById("p2").innerHTML = getQueryVariable('phone'); // you will have to parse
+	document.getElementById("p3").innerHTML = getQueryVariable('course');
+	document.getElementById("p4").innerHTML = getQueryVariable('desc') 
+	if(getQueryVariable('sub1')){
+		document.getElementById("p5").innerHTML=  getQueryVariable('sub1') + '   ';
+	}
+	if(getQueryVariable('sub2')){
+		document.getElementById("p5").innerHTML+= getQueryVariable('sub2')+ '   ';
+	}
+	if(getQueryVariable('sub2')){
+		document.getElementById("p5").innerHTML+=  getQueryVariable('sub3')+ '   ';
+	}
+	
+	document.getElementById("p6").innerHTML = getQueryVariable('country') 
+
+	</script>
+</body>
+</html>
