@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TabKey</title>
+	<style type="text/css">
+		span{
+			color: red;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<img src="https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+	<span>Click on Screen and Press any Key and the screen flashes the key name</span>
+	<h1 id="h1"></h1>
+	<script>
+		var date = new Date();
+		console.log(date);
+		const body = document.getElementsByTagName('body')[0];
+		const h1 = document.getElementById('h1');
+		body.addEventListener("keypress", myKeyPress);
+		function myKeyPress(e){
+				h1.innerText = e.code+' pressed';
+			
+		}
+
+	</script>
+</body>
+</html>
