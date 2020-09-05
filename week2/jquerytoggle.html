@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+	</script> 
+	<script> 
+		$(document).ready(function() { 
+			$("#b1").click(function() { 
+				$("#gfg").toggle(); 
+			}); 
+
+			 $("#div").dblclick(function(){
+    			$( this ).toggleClass("divClass2");
+  				});
+			}); 
+		$(document).ready(function(){
+  $("#b3").click(function(){
+    $("#diva").fadeIn();
+    $("#divb").fadeIn("slow");
+    $("#divc").fadeIn(3000);
+  });
+});
+
+		$(document).ready(function(){
+  $("#b2").click(function(){
+    $("#div1").fadeOut();
+    $("#div2").fadeOut("slow");
+    $("#div3").fadeOut(3000);
+  });
+});
+	</script> 
+	<style> 
+		#gfg { 
+			color: green; 
+			border: 5px solid black; 
+			width: 200px; 
+			text-align: center; 
+		} 
+		.divClass1
+		{
+		    padding:5px;
+		    text-align:center;
+		    background-color:yellow;
+		    border:solid 1px;
+		    cursor: pointer;
+		}
+		.divClass2
+		{
+		    padding:5px;
+		    text-align:center;
+		    background-color:grey;
+		    border:solid 1px;
+		    cursor: pointer;
+		}
+	</style> 
+	
+</head> 
+
+<body> 
+
+	<div id="gfg">I am visible now .</div> 
+	<br>
+	<button id="b1">Click to hide() and show() the above div</button> 
+	<br><br><br><br><br>
+	<div id="div" class="divClass1">Double click on this !</div>
+
+<p>Demonstrate fadeOut() with different parameters.</p>
+
+<button id="b2">Click to fade out boxes</button><br><br>
+
+<div id="div1" style="width:80px;height:80px;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;background-color:blue;"></div>
+
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+
+<button id="b3">Click to fade in boxes</button><br><br>
+
+<div id="diva" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="divb" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="divc" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+
+</body> 
+
+</html> 
